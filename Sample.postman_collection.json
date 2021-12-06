@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "c0fc08d6-14eb-4757-ab21-cb0c95135b58",
+		"name": "Sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/api/auth/register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4NTEwMTk0LCJpYXQiOjE2Mzg1MDk4OTQsImp0aSI6ImMxMzBmMTc2ZDE2ZDRlNGY4ODZjNWI5NGFjYjMyN2IwIiwidXNlcl9pZCI6Mn0.MN02uJWIXg7JXu73cseOt-U2A6tL5j9BxjMPTRQTI2I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"test\",\r\n\"password\": \"12A45#78\",\r\n\"password2\": \"12A45#78\",\r\n\"email\": \"test@gmail.com\",\r\n\"first_name\": \"testfn\",\r\n\"last_name\": \"testln\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"username\":\"adesh\",\r\n\"password\": \"12A45#78\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/employee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4NTEyNjg2LCJpYXQiOjE2Mzg1MTIzODYsImp0aSI6IjRiZTkyNmE2ODA0ZjQwNThhYzQ5MjAyZDU2MmVkZjQ3IiwidXNlcl9pZCI6Mn0.U8I2Bi01oAPB4QJrkKGO3ZRAAmKJIYi9gWLLGRdhjHE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"name11\",\r\n\"department\": \"dep1\",\r\n\"contact\": \"contact1\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/employee/export/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4NTEyNjg2LCJpYXQiOjE2Mzg1MTIzODYsImp0aSI6IjRiZTkyNmE2ODA0ZjQwNThhYzQ5MjAyZDU2MmVkZjQ3IiwidXNlcl9pZCI6Mn0.U8I2Bi01oAPB4QJrkKGO3ZRAAmKJIYi9gWLLGRdhjHE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"name11\",\r\n\"department\": \"dep1\",\r\n\"contact\": \"contact1\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/employee/export/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"export",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/auth/logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4NTEwNTMyLCJpYXQiOjE2Mzg1MTAyMzIsImp0aSI6IjUzYjhlMDhlMTA1ZTQzOGFiNDdlN2M3NzZhNjA5NjllIiwidXNlcl9pZCI6Mn0.aa74NjyOGubGxF8Nwa_a-TkLfn8WsT1ryTevCocVkeQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refresh_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY0MTA5NjM3OCwiaWF0IjoxNjM4NTA0Mzc4LCJqdGkiOiJhYjYzNzFjODY2OGE0YmFhYTc2MDE0MGEwYzJkNTNlZSIsInVzZXJfaWQiOjJ9.HfBIin2hMb41VwYeA-4QmIG0ipFG8MfnklZPqAhArlA\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
